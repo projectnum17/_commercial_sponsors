@@ -1,0 +1,44 @@
+.loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 1000;
+  transition: .6s linear;
+
+  &.hide {
+    opacity: 0;
+    transition: .6s linear;
+
+  }
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .img-inner {
+    max-width: 154px;
+    display: flex;
+    animation: pulse 1.5s infinite;
+    transition: all .6s linear;
+    opacity: 1;
+
+
+    img {
+      flex-shrink: 0;
+
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0;
+  }
+
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Unbounded&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <title>Article Item</title>
+
+
+  <link rel="shortcut icon" href="./img/social/favicon.png" sizes="16x16" type="image/png" />
+
+  <meta name="theme-color" content="#F4F4F6" />
+  <meta property="og:image" content="./img/social/preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="./img/social/preview.png" />
+
+  <meta property="og:title" content="ДОБРО, ЩО ДАЄ НАДІЮ" />
+
+  <link rel="stylesheet" href="./css/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src="./js/index.bundle.js" defer></script>
+
+</head>
+
+<body>
+  @@include('blocks/header.html')
+
+  <main id="page5Identifier">
+    @@include('pages/article-item/_article-description.html')
+
+    @@include('pages/main/_support.html')
+
+    @@include('pages/article-item/_other-news.html')
+
+  </main>
+
+
+  @@include('blocks/footer.html')
+
+  <script>
+     const header = document.querySelector('.header');
+    const el = document.querySelector('.thumb-preview');
+
+    if (header && el && header.classList.contains('header-hide')) {
+      el.classList.add('test'); 
+    }
+  </script>
+</body>
+
+</html>

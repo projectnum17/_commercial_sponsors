@@ -1,0 +1,74 @@
+.other-projects {
+  margin-bottom: var(--section-margin);
+
+  @include mobile {
+    margin-bottom: var(--section-margin-mob);
+
+  }
+
+  .other-projects__head {
+    margin-bottom: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    @include mobile {
+      margin-bottom: 32px;
+      justify-content: center;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      font-weight: 600;
+      line-height: 67.2px;
+      color: var(--color-dark);
+
+      @media screen and (max-width:1000px) {
+        line-height: 55px;
+      }
+
+      @include mobile {
+        line-height: 43px;
+      }
+    }
+
+    a {
+      font-family: var(--font-family-secondary);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      max-width: 191px;
+      width: 100%;
+      border: 1px solid var(--color-dark);
+      color: var(--color-dark);
+      border-radius: 100px;
+    }
+  }
+
+  .link-mob {
+    padding-top: 32px;
+    display: flex;
+    justify-content: center;
+
+    a {
+      font-family: var(--font-family-secondary);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      max-width: 191px;
+      width: 100%;
+      border: 1px solid var(--color-dark);
+      color: var(--color-dark);
+      border-radius: 100px;
+    }
+  }
+}

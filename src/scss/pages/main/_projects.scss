@@ -1,0 +1,330 @@
+.projects {
+  margin-bottom: var(--section-margin);
+
+  @include mobile {
+    margin-bottom: var(--section-margin-mob);
+  }
+
+  .projects__about,
+  .mob-link {
+    margin-bottom: 65px;
+
+    @media screen and (max-width:1000px) {
+      margin-bottom: 45px;
+    }
+
+    @include mobile {
+      margin-bottom: 32px;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    h2 {
+      text-transform: uppercase;
+      //font-size: 56px;
+      font-weight: 600;
+      line-height: 67.2px;
+      color: var(--color-dark);
+
+      @media screen and (max-width:1000px) {
+        line-height: 55px;
+
+      }
+
+      @include mobile {
+        line-height: 43px;
+
+      }
+    }
+
+    a {
+      font-family: var(--font-family-secondary);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      max-width: 191px;
+      width: 100%;
+      border: 1px solid var(--color-dark);
+      color: var(--color-dark);
+      border-radius: 100px;
+
+    }
+  }
+
+  .mob-link {
+    padding-top: 32px;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+}
+
+.projects__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  @include mobile {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 12px;
+  }
+
+  a {
+    transition: all .2s linear !important;
+
+    overflow: hidden;
+    border-radius: 8px;
+    //max-width: 440px;
+    width: 100%;
+    position: relative;
+
+    .project-excerpt {
+
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.5s ease-out;
+
+
+      p {
+        font-family: var(--font-family-secondary);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #868692;
+        margin-bottom: 16px;
+        overflow: hidden;
+      }
+    }
+
+    @include mobile {
+      max-height: 399px;
+
+      img {
+        object-fit: cover;
+      }
+    }
+
+    @include hover {
+      &::before {
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+
+      }
+
+      &::after {
+        opacity: 1;
+        transition: var(--transition);
+
+      }
+
+      // .projects__cards-item__info {
+      //   opacity: 1;
+      //   transform: scaleX(1);
+      // }
+
+      // .projects__cards-item__descr {
+      //   opacity: 0;
+      // }
+    }
+
+    &::before {
+      visibility: visible;
+      opacity: 1;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+      transition: var(--transition);
+
+    }
+
+    &::after {
+      opacity: 0;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+      transition: var(--transition);
+    }
+
+    .projects__cards-item__label {
+      position: absolute;
+      top: 32px;
+      left: 32px;
+      border-radius: 100px;
+      padding: 6px 16px;
+    }
+
+    .projects__cards-item__thumb {
+
+      img {
+        border-radius: 8px;
+        width: 100%;
+      }
+    }
+
+    .projects__cards-item__descr {
+      opacity: 1;
+      z-index: 10;
+      color: var(--color-light);
+      position: absolute;
+      bottom: 32px;
+      left: 32px;
+      transition: var(--transition);
+
+      h6 {
+        font-family: var(--font-family-secondary);
+        //font-size: 12px;
+        font-weight: 500;
+        line-height: 15.6px;
+        opacity: .8;
+        position: relative;
+
+        &:first-child {
+
+          &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            background: url(../img/icons/hover-arrow.svg) no-repeat center center / cover;
+            opacity: 0;
+            transition: .2s linear;
+          }
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+      }
+
+      h4 {
+        font-family: var(--font-family-secondary);
+        //font-size: 24px;
+        font-weight: 600;
+        line-height: 31.2px;
+        margin-bottom: 8px;
+      }
+    }
+
+    .projects__cards-item__info {
+      background: var(--color-light);
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      right: 8px;
+      border-radius: 10px;
+      padding: 24px;
+      transition: var(--transition);
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: 0 100%;
+      z-index: 10000;
+
+      .info-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5px;
+        margin-bottom: 8px;
+      }
+
+      h6 {
+        font-family: var(--font-family-secondary);
+        //font-size: 12px;
+        font-weight: 500;
+        line-height: 15.6px;
+        color: #868692;
+      }
+
+      h4 {
+        font-family: var(--font-family-secondary);
+        //font-size: 24px;
+        font-weight: 600;
+        line-height: 31.2px;
+        margin-bottom: 16px;
+      }
+
+      p {
+        font-family: var(--font-family-secondary);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #868692;
+        margin-bottom: 16px;
+      }
+
+      h6:last-child {
+        color: var(--color-dark);
+        opacity: .8;
+      }
+    }
+  }
+}
+
+.projects__cards-item__descr {
+  bottom: 8px !important;
+  left: 8px !important;
+  right: 8px !important;
+  padding: 24px !important;
+  border-radius: 10px !important;
+}
+
+.projects__cards {
+  a:hover {
+    transition: all .2s linear !important;
+
+    .h6 {
+      color: #868692;
+    }
+
+    h6 {
+      &:first-child {
+
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+
+    h4 {
+      color: #1F1F26;
+    }
+
+    .project-excerpt {
+      // height: 100%;
+      // opacity: 1;
+      // transform: scaleY(1);
+      transition: all .2s linear !important;
+
+      grid-template-rows: 1fr;
+
+
+      p {
+        color: #868692;
+
+
+      }
+    }
+
+    .projects__cards-item__descr {
+      background: #F4F4F6;
+    }
+  }
+}

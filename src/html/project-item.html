@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Unbounded&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <title>Project Item</title>
+
+
+  <link rel="shortcut icon" href="./img/social/favicon.png" sizes="16x16" type="image/png" />
+
+  <meta name="theme-color" content="#F4F4F6" />
+  <meta property="og:image" content="./img/social/preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="./img/social/preview.png" />
+
+  <meta property="og:title" content="ДОБРО, ЩО ДАЄ НАДІЮ" />
+
+  <!-- SWIPER UPD -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- SWIPER UPD -->
+
+  <link rel="stylesheet" href="./css/main.css" />
+  <!-- <script src="./js/index.bundle.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
+</head>
+
+<body>
+  <style>
+    html {
+      overflow-x: hidden !important;
+    }
+    body {
+      overflow-x: hidden !important;
+    }
+    .single-swiper-inner {
+      margin-bottom: 64px;
+    }
+
+    .slider-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      padding-top: 16px;
+    }
+
+    .project-description-col.l {
+      z-index: 15;
+    }
+
+    .slider-nav-elem {
+      padding: 9px;
+      border-radius: 50%;
+      background: #D5D5D9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .3s linear;
+      border: 1px solid transparent;
+      cursor: pointer;
+
+    }
+
+    .slider-nav-elem:hover {
+      transition: all .3s linear;
+      border: 1px solid #1F1F26;
+    }
+
+    .slider-nav-elem.swiper-button-disabled:hover {
+      border: 1px solid transparent;
+    }
+
+    .slider-nav-elem.swiper-button-disabled {
+      opacity: .5;
+    }
+
+    .single-swiper__slide {
+      width: 100% !important;
+      max-width: 300px !important;
+      max-height: 300px !important;
+    }
+
+    .single-swiper__slide img {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .swiper {
+      overflow: visible !important;
+    }
+    .single-swiper-inner {
+      position: relative;
+    }
+
+    .single-swiper-inner:after {
+      position: absolute;
+      content: '';
+      height: 100%;
+      width: 100vw;
+      background: #F4F4F6;
+      left: 0;
+      z-index: 10;
+      top: 50%;
+      transform: translate(-100%, -50%);
+    }
+  </style>
+
+  @@include('blocks/header.html')
+
+  <main id="page3Identifier">
+    @@include('pages/project-item/_project-description.html')
+    <!-- @@include('pages/main/_support.html')
+    @@include('pages/project-item/_other-projects.html') -->
+  </main>
+
+
+  @@include('blocks/footer.html')
+  <!-- <script>
+    var totalWidth = 0;
+
+    $('.swiper-wrapper')
+      .children()
+      .each(function () {
+        totalWidth += $(this).outerWidth(true);
+      });
+  </script> -->
+
+  <script>
+    const singleSwiper = new Swiper('.single-swiper', {
+      slidesPerView: 'auto',
+      //slidesPerView: 2.5,
+      slidesPerGroup: 1,
+      spaceBetween: 20,
+
+      navigation: {
+        nextEl: '.slider-nav__next',
+        prevEl: '.slider-nav__prev'
+      }
+    })
+
+    // document.addEventListener('DOMContentLoaded', function () {
+    //   const swiperInner = document.querySelector('.single-swiper');
+    //   const swiperSlides = document.querySelectorAll('.single-swiper__slide');
+
+    //   let totalWidth = 0;
+
+    //   swiperSlides.forEach(slide => {
+    //     totalWidth += slide.offsetWidth;
+    //   });
+
+    //   swiperInner.style.width = `${totalWidth}px`;
+    // });
+  </script>
+</body>
+
+</html>

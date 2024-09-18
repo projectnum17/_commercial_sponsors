@@ -1,0 +1,92 @@
+body {
+  //@include fluid-text(24, 18);
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.28;
+  color: var(--color-dark);
+  background: var(--color-light);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+  transition: var(--transition);
+}
+
+a {
+  @include reset-link;
+}
+
+svg {
+  color: inherit;
+}
+
+button {
+  color: inherit;
+  @include reset-button;
+}
+
+h1 {
+  @include fluid-text (90, 44)
+}
+
+// h2 {
+//   @include fluid-text (56, 36)
+// }
+
+h3 {
+  @include fluid-text (24, 18)
+}
+
+h4 {
+  @include fluid-text (24, 18)
+}
+
+h6 {
+  @include fluid-text (12, 11)
+}
+
+.light-to-black {
+  @include hover {
+    background: var(--color-dark);
+    color: #FFFFFF !important;
+  }
+}
+
+
+.active-proj,
+.plan-proj,
+.finish-proj {
+  font-family: var(--font-family-secondary);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active-proj {
+  background: var(--active-proj);
+  color: #FFFFFF;
+}
+
+.plan-proj {
+  background: var(--plan-proj);
+  color: #FFFFFF;
+}
+
+.finish-proj {
+  background: var(--finish-proj);
+  color: #1F1F26;
+}

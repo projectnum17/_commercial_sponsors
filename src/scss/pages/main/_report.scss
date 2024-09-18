@@ -1,0 +1,112 @@
+.report {
+  background: var(--color-dark);
+  padding: 128px 0;
+  margin-bottom: var(--section-margin);
+
+  @media screen and (max-width:1000px) {
+    padding: 80px 0;
+  }
+
+  @include mobile {
+    padding: 64px 0;
+    margin-bottom: var(--section-margin-mob);
+  }
+
+  h2 {
+    text-transform: uppercase;
+    margin-bottom: 64px;
+    //font-size: 56px;
+    font-weight: 600;
+    line-height: 67.2px;
+    text-align: left;
+    color: var(--color-light);
+
+    @media screen and (max-width:1000px) {
+      margin-bottom: 44px;
+    }
+
+    @include mobile {
+      margin-bottom: 32px;
+      line-height: 43px;
+
+    }
+
+    @media screen and (max-width:470px) {
+      max-width: 88%;
+    }
+
+    span {
+      color: var(--color-accent);
+    }
+  }
+
+  .report-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    color: var(--color-light);
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 8px;
+
+    }
+
+
+    .report-cards__item {
+      background: var(--color-grey);
+      border-radius: 24px;
+      padding: 24px 32px;
+      display: flex;
+      flex-direction: column;
+
+      @include mobile {
+        padding: 20px;
+      }
+
+      .report-cards__item-icon {
+        margin-bottom: 60px;
+
+        @include mobile {
+          margin-bottom: 25px;
+        }
+      }
+
+      h2 {
+        margin-bottom: 0;
+        //font-size: 56px;
+        font-weight: 600;
+        line-height: 67.2px;
+
+        @include mobile {
+          line-height: 43px;
+        }
+      }
+
+      h3 {
+        //font-size: 24px;
+        font-weight: 600;
+        line-height: 29.76px;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+
+        @include mobile {
+          line-height: 22px;
+          margin-bottom: 12px;
+        }
+      }
+
+      p {
+        font-family: var(--font-family-secondary);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+
+        @include mobile {
+          font-size: 14px;
+          line-height: 21px;
+        }
+      }
+    }
+  }
+}

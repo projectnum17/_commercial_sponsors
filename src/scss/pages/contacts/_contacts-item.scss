@@ -1,0 +1,147 @@
+.contact-item {
+  margin-bottom: var(--section-margin);
+
+  @include mobile {
+    margin-bottom: var(--section-margin-mob);
+  }
+
+  .contact-item-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 64px;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    h2 {
+      align-self: flex-end;
+      text-transform: uppercase;
+      //font-size: 56px;
+      font-weight: 600;
+      line-height: 67.2px;
+
+      @media screen and (max-width:1000px) {
+        line-height: 55px;
+      }
+
+      @include mobile {
+        line-height: 43px;
+        align-self: flex-start;
+
+      }
+    }
+
+    p {
+      max-width: 440px;
+      font-family: 'Manrope';
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 27px;
+
+      @include mobile {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+  }
+
+  .contact-item-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    @media screen and (max-width:1000px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card {
+      min-height: 230px;
+      padding: 31px;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #EAEAEC;
+      border: 1px solid #D5D5D9;
+
+
+      @include mobile {
+        padding: 24px;
+        min-height: 190px;
+      }
+
+
+      &.socials {
+        .card-title {
+          font-family: 'Manrope';
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 33.6px;
+
+          @include mobile {
+            font-size: 18px;
+            line-height: 27px;
+          }
+        }
+
+        .card-row:last-child {
+          display: flex;
+          align-items: flex-start;
+          gap: 32px;
+
+          @media screen and (max-width:520px) {
+            justify-content: space-between;
+          }
+
+          a {
+            display: flex;
+            flex-shrink: 0;
+          }
+        }
+      }
+
+      .card-title {
+        font-family: 'Manrope';
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19.6px;
+        color: #868692;
+
+        @include mobile {
+          font-size: 12px;
+          line-height: 18px;
+          margin-bottom: 8px;
+        }
+      }
+
+      .card-link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: 'Manrope';
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 33.6px;
+
+        @include mobile {
+          font-size: 18px;
+          line-height: 27px;
+        }
+
+
+        span:first-child {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}

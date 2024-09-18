@@ -1,0 +1,24 @@
+// Base
+@import  "./base/var";
+@import  "./base/mixins";
+@import  "./base/normalize";
+@import  "./base/fonts";
+@import  "./base/media";
+@import  "./base/utils";
+@import './base/sticky-footer';
+@import  "./base/globals";
+
+
+// Components
+@import "./components/*.scss";
+
+// Blocks
+@import "./blocks/*.scss";
+
+// Pages
+@import './pages/main/*.scss';
+@import './pages/projects/*.scss';
+@import './pages/project-item/*.scss';
+@import './pages/blog/*.scss';
+@import './pages/article-item/*.scss';
+@import './pages/contacts/*.scss';
